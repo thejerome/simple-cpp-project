@@ -13,18 +13,16 @@
 #include "t08_watch.h"
 #include "t09_snail.h"
 
-
 using namespace std;
 
 int main(int argc, char **argv) {
     if (argc != 2) {
-        cout << "You should specify a name of function to run: \"<executable_name>.exe <function name>\"\n";
+        cout << "You should specify a name of a single function to run\n";
         return -1;
     }
     char *functionName = argv[1];
-    cout << "Running function \"" << functionName << "\"\n";
 
-    std::map<std::string, std::function<int()>> funcMap =
+    std::map <std::string, std::function<int()>> funcMap =
             {
                     {"t00_hello",        t00_hello},
                     {"t01_squirrels",    t01_squirrels},
